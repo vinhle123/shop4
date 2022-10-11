@@ -1,0 +1,1 @@
+<center><img src="<?php echo $this->Url->build('/webroot/images/error/404.png', ['fullBase' => false]); ?>"></center>
