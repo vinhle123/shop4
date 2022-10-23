@@ -58,19 +58,19 @@ $helper = $this->loadHelper("core");
 
                <h4>Mô Tả:</h4>
                <?php echo $product['description']; ?>
-               <ul>
-                <li>
+              
                     <div class="form-group quantity-box">
-                        <label class="control-label">Số lượng cần mua:</label>
-                        <input class="form-control" value="1" min="1" max="20" type="number">
+                        <label class="control-label"><h4>Số lượng cần mua:</h4></label>
+                        <div class="quatity_detail" >
+                          <button onclick="quatityminus()" type="button" class="change-quatity-btn">-</button><span class="quatitycartdetail">1</span><button onclick="quatityplus()" type="button"  class="change-quatity-btn">+</button>
+                        </div>
                     </div>
-                </li>
-            </ul>
+              
 
             <div class="price-box-bar">
                 <div class="cart-and-bay-btn">
-                    <a class="btn hvr-hover" data-fancybox-close="" href="#">Mua Ngay</a>
-                    <a class="btn hvr-hover" data-fancybox-close="" href="#">Thêm Vào giỏ hàng</a>
+                    <a class="btn btn-danger" onclick="byproductdetail(<?php echo $product['id']; ?>,<?php echo $product['price']; ?>,'<?php echo $product['name']; ?>','<?php echo $product['name_key']; ?>','<?php echo $product['photo']; ?>',0)" href="javascript:void(0)">Thêm Vào giỏ hàng</a>
+                    <a class="btn btn-primary" onclick="byproductdetail(<?php echo $product['id']; ?>,<?php echo $product['price']; ?>,'<?php echo $product['name']; ?>','<?php echo $product['name_key']; ?>','<?php echo $product['photo']; ?>',1)" href="javascript:void(0)">Mua Ngay</a>
                 </div>
             </div>
         </div>

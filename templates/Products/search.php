@@ -5,10 +5,10 @@ $helper = $this->loadHelper("core");
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Sản Phẩm</h2>
+                <h2>Tìm Kiếm</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="<?php echo $this->Url->build('/', ['fullBase' => true]); ?>">Trang Chủ</a></li>
-                    <li class="breadcrumb-item active">Sản Phẩm</li>
+                    <li class="breadcrumb-item active">Tìm Kiếm</li>
                 </ul>
             </div>
         </div>
@@ -22,20 +22,21 @@ $helper = $this->loadHelper("core");
             <div class="list-pro">
                 <div class="row list-pro">
                     <div class="title">
-                        <h2><a href="javascript:void(0)"><?php echo $category['name']; ?></a></h2>
+                        <h2><a href="javascript:void(0)"><?php echo 'Tìm Kiếm'; ?></a></h2>
                     </div>
+
                     <?php
-                    if(!empty($products)):
+                    if(!empty($products) && !empty($search)):
                     foreach($products as $product):
                         ?>
                         <div class="col-xs-6 col-md-3">
                             <?php echo $this->element('product',array('product' => $product));  ?>
                         </div>
-                   <?php 
+                    <?php 
                         endforeach; 
                         else:
                     ?> 
-                    <?php echo 'Không tìm thấy sản phẩm nào'; ?>
+                    <?php echo 'Không tìm thấy sản phẩm nào với kết quả "'.$search.'"'; ?>
                     <?php 
                        endif;
                     ?> 

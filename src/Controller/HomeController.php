@@ -23,12 +23,5 @@ class HomeController extends AppController
         $products_randoms = $this->Products->getlisthomeRandom();
         $this->set('products_randoms',$products_randoms);
     }
-
-    public function cart()
-    {   
-            
-        
-    }
-
     
 }

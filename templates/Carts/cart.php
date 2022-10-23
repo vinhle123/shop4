@@ -42,7 +42,7 @@ $helper = $this->loadHelper("core");
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="email">Email:<sup> *</sup></i></label>
+                                <label for="email">Email:</i></label>
                                 <input type="text" name="email" id="txtemail" class="form-control" value="" placeholder="" required="">
                             </div>
                         </div>
@@ -77,6 +77,13 @@ $helper = $this->loadHelper("core");
                             &nbsp;&nbsp;Thanh toán thông qua ngân hàng.
                         </label>
                     </div>
+                    
+                    <div class="radio">
+                        <label for="method2">
+                            <input type="radio"  name="method" id="method3" value="momo">
+                            &nbsp;&nbsp;Thanh toán thông qua MOMO.
+                        </label>
+                    </div>
                     <div class="list-group form-methods" id="bank_method" style="display: none;">
                         <div class="w-100">
                           <p class="mb-1"><strong>Công ty Lộc Thiên Thảo</strong><i class="fal fa-shield-check float-right text-success"></i></p>
@@ -86,12 +93,6 @@ $helper = $this->loadHelper("core");
                         <p><i class="fas fa-angle-right"></i> Ngân hàng: Vietcombank</p>
                         <p><i class="fas fa-angle-right"></i> Nội dung thanh toán: <span id="contenttransferbankcompany">Số điện thoại - <?php echo $code; ?></span></p>
                  
-                    </div>
-                     <div class="radio">
-                        <label for="method2">
-                            <input type="radio"  name="method" id="method3" value="momo">
-                            &nbsp;&nbsp;Thanh toán thông qua MOMO.
-                        </label>
                     </div>
                     <div class="list-group form-methods" id="momo_method" style="display: none;">
                         <div class="w-100">
@@ -104,7 +105,7 @@ $helper = $this->loadHelper("core");
                     </div>
 
           <div id="smb-order-cart" class="smbordercart mb-3 mt-3">
-            <button id="btn_order" type="button" onclick="checkout()" class="btn btn-lg btn-primary btn-block" name="order"><span>Gửi yêu cầu đặt hàng</span></button>
+            <button id="btn_order" type="button" onclick="checkout()" class="btn btn-primary btn-block" name="order"><span>Gửi yêu cầu đặt hàng</span></button>
         </div>
     </div>
 </div>

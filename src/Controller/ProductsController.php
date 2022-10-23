@@ -17,6 +17,20 @@ class ProductsController extends AppController
         //$session->delete('name');
     }
 
+    public function search(){
+        //pr( $this->request->getData());
+        $products = array();
+        $search = '';
+        if($this->request->is('post') && !empty($this->request->getData('search'))){
+            $search = $this->request->getData('search');
+            $products = $this->Products->find()->where(['name like' => '%'.$search.'%'])->all();
+           
+        }
+        $this->set('products',$products);
+        $this->set('search',$search);
+
+    }
+
     public function category($params=null){
         $this->set('menu_active','product');
         $this->set('title_for_layout',TITLE_PRODUCT);

@@ -54,14 +54,15 @@ return static function (RouteBuilder $routes) {
         $builder->connect('/carts', ['controller' => 'Carts', 'action' => 'index']);
         $builder->connect('/', ['controller' => 'Home', 'action' => 'index']);
         $builder->connect('/trang-chu.html', ['controller' => 'Home', 'action' => 'index']);
-        $builder->connect('/thong-tin/gioi-thieu.html', ['controller' => 'Pages', 'action' => 'about']);
-        $builder->connect('/thong-tin/lien-he.html', ['controller' => 'Pages', 'action' => 'contact']);
+        $builder->connect('/gioi-thieu', ['controller' => 'Pages', 'action' => 'about']);
+        $builder->connect('/lien-he', ['controller' => 'Pages', 'action' => 'contact']);
         $builder->connect('/san-pham.html', ['controller' => 'Products', 'action' => 'index']);
         $builder->connect('/san-pham', ['controller' => 'Products', 'action' => 'index']);
         $builder->connect('/san-pham/*', ['controller' => 'Products', 'action' => 'detail']);
         $builder->connect('/the-loai', ['controller' => 'Products', 'action' => 'index']);
         $builder->connect('/the-loai/*', ['controller' => 'Products', 'action' => 'category']);
         $builder->connect('/gio-hang', ['controller' => 'Carts', 'action' => 'cart']);
+        $builder->connect('/tim-kiem', ['controller' => 'Products', 'action' => 'search']);
 
 
         $builder->connect('/admin', ['controller' => 'Products', 'action' => 'admin']);

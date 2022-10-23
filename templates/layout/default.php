@@ -43,7 +43,7 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item <?php if($menu_active == 'home'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/', ['fullBase' => true]); ?>">Trang chủ</a></li>
-                        <li class="nav-item <?php if($menu_active == 'about'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/thong-tin/gioi-thieu.html', ['fullBase' => true]); ?>">Giới Thiệu</a></li>
+                        <li class="nav-item <?php if($menu_active == 'about'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/gioi-thieu', ['fullBase' => true]); ?>">Giới Thiệu</a></li>
                         <li class="dropdown <?php if($menu_active == 'product'){ echo 'active';} ?>">
                             <a href="<?php echo $this->Url->build('/san-pham', ['fullBase' => true]); ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản Phẩm</a>
                             <?php if(!empty($cates)): ?>
@@ -54,7 +54,7 @@
                             </ul>
                             <?php endif; ?>
                         </li>
-                        <li class="nav-item <?php if($menu_active == 'contact'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/thong-tin/lien-he.html', ['fullBase' => true]); ?>">Liên Hệ</a></li>
+                        <li class="nav-item <?php if($menu_active == 'contact'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/lien-he', ['fullBase' => true]); ?>">Liên Hệ</a></li>
                     </ul>
                 </div>
                 <div class="attr-nav">
@@ -78,11 +78,15 @@
 
     <div class="top-search">
         <div class="container">
+           
+            <form method="post" action ="<?php echo $this->Url->build('/tim-kiem', ['fullBase' => true]); ?>" >
             <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Tìm Kiếm">
+                <span style="cursor: pointer;" class="input-group-addon btn-search"><i class="fa fa-search"></i></span>
+                <input type="text" name="search" class="form-control txtsearch" placeholder="Tìm Kiếm">
                 <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
             </div>
+            </form>
+            
         </div>
     </div>
 
@@ -152,7 +156,7 @@
         </div>
     </footer>
 
-
+<!-- cart -->
     <div class="modal fade bottom" id="frameModalCart" 
       aria-hidden="true">
       <div class="modal-dialog modal-frame modal-bottom" role="document">
@@ -163,12 +167,34 @@
             </div>
              <center>
                 <a class="btn btn-danger" href="<?php echo $this->Url->build('/gio-hang', ['fullBase' => true]); ?>">Đến trang đặt hàng</a>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Mua Thêm</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Mua Thêm</button>
               </center>
           </div>
         </div>
       </div>
     </div>
+<!-- contact -->
+    <ul class="giuseart-pc-contact-bar">
+        <li class="facebook">
+            <a href="https://m.me/jquangvinhle301" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="zalo">
+            <a href="https://zalo.me/0327877576" target="_blank" rel="nofollow"></a>
+        </li>
+    </ul>
+
+    <ul class="giuseart-mobile-contact-bar">
+        <li class="facebook">
+            <a href="https://m.me/quangvinhle301" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="zalo">
+            <a href="https://zalo.me/0327877576" target="_blank" rel="nofollow"></a>
+        </li>
+        <li class="hotline">
+            <a href="tel:0327877576" target="_blank" rel="nofollow"></a>
+        </li>
+    </ul>
+
     <script type="text/javascript">
      var full_url = "<?php  echo  $this->Url->build('/', ['fullBase' => true]); ?>";
     </script>

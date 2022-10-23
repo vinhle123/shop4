@@ -1,0 +1,68 @@
+.giuseart-mobile-contact-bar{
+display:none 
+}
+.giuseart-pc-contact-bar{
+left: 30px;
+bottom: 30px;
+position: fixed;
+z-index: 998;
+margin-bottom:0
+}
+.giuseart-pc-contact-bar li{
+width: 44px;
+height: 46px;
+overflow: hidden;
+ margin-bottom: 0;
+list-style: none;
+}
+.giuseart-pc-contact-bar li.facebook{
+margin-bottom: 8px;
+background: url('../images/icon/fb.png');
+background-repeat: no-repeat;
+}
+.giuseart-pc-contact-bar li.zalo{
+background: url(../images/icon/zl.png);    background-repeat: no-repeat;
+}
+.giuseart-pc-contact-bar li a{
+display: block;
+width: 44px;
+height: 44px;
+}
+ 
+@media only screen and (max-width: 499px) {
+.giuseart-pc-contact-bar{
+display:none
+}
+.giuseart-mobile-contact-bar{
+left: 10px;
+bottom: 10px;
+position: fixed;
+z-index: 998;
+margin-bottom:0;
+display:block !Important
+}
+.giuseart-mobile-contact-bar li{
+display:inline-block;
+float:left;
+margin-right:7px;
+list-style:none
+}
+.giuseart-mobile-contact-bar li.facebook{
+margin-bottom: 8px;
+background: url(../images/icon/fb.png);
+background-repeat: no-repeat;
+}
+.giuseart-mobile-contact-bar li.zalo{
+background: url(../images/icon/zl.png);    background-repeat: no-repeat;
+}
+.giuseart-mobile-contact-bar li a{
+display: block;
+width: 44px;
+height: 44px;}
+.giuseart-mobile-contact-bar li.hotline {
+background: url(../images/icon/p2.gif);
+background-repeat: no-repeat;
+background-size: 44px;
+}
+}
+ 

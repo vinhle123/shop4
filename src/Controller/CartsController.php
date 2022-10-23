@@ -119,7 +119,7 @@ class CartsController extends AppController
                 $this->_jsonError('Vui lòng nhập họ tên của quý khách hàng');exit();
             }
             if(empty($data['txtemail'])){
-                $this->_jsonError('Vui lòng nhập email của quý khách hàng');exit();
+               // $this->_jsonError('Vui lòng nhập email của quý khách hàng');exit();
             }
             if(empty($data['txtaddress'])){
                 $this->_jsonError('Vui lòng nhập địa chỉ nhận hàng');exit();

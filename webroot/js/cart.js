@@ -31,29 +31,52 @@ function deleteitemcart(id,idname)
 
 function quatityminus(id,idname)
 {	
-	$('#'+idname+id).html(function(i, current){
-		if(current==null){
-			current=1;
-		} 
-		current=current*1-1;
-		if(current<=0) current=1;
-		return current;
-	});	
-	totoalupdate(id,idname);
+	if(typeof id !== 'undefined'){
+		$('#'+idname+id).html(function(i, current){
+			if(current==null){
+				current=1;
+			} 
+			current=current*1-1;
+			if(current<=0) current=1;
+			return current;
+		});	
+		totoalupdate(id,idname);
+	}else{
+		$('.quatitycartdetail').html(function(i, current){
+			if(current==null){
+				current=1;
+			} 
+			current=current*1-1;
+			if(current<=0) current=1;
+			return current;
+		});	
+	}
+	
 }
 
 function quatityplus(id,idname)
 {	
-	$('#'+idname+id).html(function(i, current){
-		if(current==null){
-			current=1;
-		} 
-		current=current*1+1;
-		if(current>=100) current=100;
-		return current;
-	});	
+	if(typeof id !== 'undefined'){
+		$('#'+idname+id).html(function(i, current){
+			if(current==null){
+				current=1;
+			} 
+			current=current*1+1;
+			if(current>=100) current=100;
+			return current;
+		});	
 
-	totoalupdate(id,idname);
+		totoalupdate(id,idname);
+	}else{
+		$('.quatitycartdetail').html(function(i, current){
+			if(current==null){
+				current=1;
+			} 
+			current=current*1+1;
+			if(current>=100) current=100;
+			return current;
+		});	
+	}
 	
 }
 
@@ -89,18 +112,34 @@ function totoalupdate(id,idname){
 function byproduct(id,price,name,name_key,img)
 {	
 	var quality = 1;
+	addtocard(id,price,name,name_key,img,quality,0);
+
+}
+
+function byproductdetail(id,price,name,name_key,img,now)
+{	
+	var quality = $('.quatitycartdetail').text();
+	addtocard(id,price,name,name_key,img,quality,now);
+
+}
+
+function addtocard(id,price,name,name_key,img,quality,now){
 	$.post(full_url + "carts/addproductcart",{"id":id,"price":price,"name":name,"name_key":name_key,"img":img,"quality":quality},function(data){
 		var json = $.parseJSON(data);
 		if ( json.result == 1 )
 		{	
-			$('#all_cart').click();
+			
 			$('#num_cart').html(json.num_cart);
+			if(now == 1){
+				window.location = full_url + "/gio-hang"
+			}else{
+				$('#all_cart').click();
+			}
 			
 
 		}
 		else
 		{
-			//button.removeClass('disabled');
 			Swal.fire({
 			  icon: 'error',
 			  text: json.message,
@@ -108,8 +147,7 @@ function byproduct(id,price,name,name_key,img)
 			  confirmButtonText: 'Đóng'
 			})
 		}
-	});
-
+	});	
 }
 
 function checkout()
@@ -190,5 +228,22 @@ $(document).ready(function(){
 		$('#bank_method').hide();
 		$('#momo_method').show();
 	});
+
+	$('.btn-search').click(function(){
+		var value = $('.txtsearch').val();
+		if(value != ''){
+			document.getElementById("frm_search").submit();
+		}
+	});
+
+	$(".txtsearch").keyup(function(event) {
+	    if (event.keyCode === 13) {
+	       var value = $('.txtsearch').val();
+			if(value != ''){
+				document.getElementById("frm_search").submit();
+			}
+	    }
+	});
 	
 })
+
