@@ -1,74 +1,72 @@
 <div class="all-title-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Liên Hệ</h2>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?php echo $this->Url->build('/', ['fullBase' => true]); ?>">Trang Chủ</a></li>
-                        <li class="breadcrumb-item active">Liên Hệ</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-</div>
-
-
-        <div class="contact-box-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-sm-12">
-                    <div class="contact-form-right">
-                        <h2>Gửi Thông Tin Để Nhận Ưu đãi</h2>
-                        <p>Gửi Thông Tin Để Nhận Ưu đãi.</p>
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Tên" required data-error="Please enter your name">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="message" placeholder="Nội dung" rows="4" data-error="Write your message" required></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="submit-button text-center">
-                                        <button class="btn hvr-hover" id="submit" type="submit">Gửi</button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                    <div class="contact-info-left">
-                    </div>
-                    <div class="contact-info-left-text" >
-                        <h2>LIÊN HỆ</h2>
-                        <p>Gửi Thông Tin Để Nhận Ưu đãi.. </p>
-                        <ul>
-                            <li>
-                                <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: Quận 7, TP.HMC </p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-phone-square"></i> Điện thoại: <a href="javascript:void(0)">+98 123456789</a></p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-envelope"></i> Email: <a href="javascript:void(0)">locthienthao.contact@gmail.com</a></p>
-                            </li>
-                        </ul>
-                        </div>
-                </div>
-                <div class="clear"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Liên Hệ</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?php echo $this->Url->build('/', ['fullBase' => true]); ?>">Trang Chủ</a></li>
+                    <li class="breadcrumb-item active">Liên Hệ</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
+<div class="contact-box-main">
+    <div class="content">
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          
+
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              
+              <h3 class="heading-contact mb-4">LIÊN HỆ VỚI CHÚNG TÔI</h3>
+              <p>Giử yêu cầu hỗ trợ hoặc cho chúng tôi biết về trải nghiệm của quý khách hàng</p>
+
+              <p><img src="<?php echo $this->Url->webroot('images/undraw-contact.svg'); ?>" alt="Image" class="img-fluid"></p>
+
+
+            </div>
+            <div class="col-md-6">
+              <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="text" class="form-control contact-field" name="name" id="name" placeholder="Họ Tên">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="text" class="form-control contact-field" name="email" id="email" placeholder="Email">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="text" class="form-control contact-field" name="phone" id="phone" placeholder="Số Điện Thoại">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <textarea class="form-control contact-field" style="height: auto;" name="message" id="message" cols="30" rows="7" placeholder="Nội Dung"></textarea>
+                  </div>
+                </div>  
+                <div class="row">
+                  <div class="col-12">
+                    <input type="submit" value="Gửi" class="btn btn-primary rounded-0 py-2 px-4 btn-contact">
+                  <span class="submitting_contact"></span>
+                  </div>
+                </div>
+              </form>
+               <div id="form-message-success">
+                    <h2> Thông tin của quý khác hàng đã được gửi và chúng tôi sẽ cố gắn phản hồi sớm nhất.</h2>
+                    Cảm ơn quý khách hàng đã quan tâm đến sản phẩm của Lộc Thiên Thảo!
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

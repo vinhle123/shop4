@@ -29,7 +29,7 @@ $helper = $this->loadHelper("core");
                     if(!empty($products) && !empty($search)):
                     foreach($products as $product):
                         ?>
-                        <div class="col-xs-6 col-md-3">
+                        <div class="col-6 col-sm-3">
                             <?php echo $this->element('product',array('product' => $product));  ?>
                         </div>
                     <?php 

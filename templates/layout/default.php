@@ -199,6 +199,6 @@
      var full_url = "<?php  echo  $this->Url->build('/', ['fullBase' => true]); ?>";
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <?php echo $this->Html->script(['jquery-3.2.1.min','popper.min','bootstrap.min','jquery.superslides.min','bootstrap-select','inewsticker','bootsnav','images-loded.min','isotope.min','owl.carousel.min','baguetteBox.min','form-validator.min','contact-form-script','custom','cart']); ?>
+    <?php echo $this->Html->script(['jquery-3.2.1.min','popper.min','bootstrap.min','jquery.superslides.min','bootstrap-select','inewsticker','bootsnav','images-loded.min','isotope.min','owl.carousel.min','baguetteBox.min','form-validator.min','custom','cart','jquery.validate.min']); ?>
 </body>
 </html>

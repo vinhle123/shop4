@@ -34,7 +34,7 @@
  body {
      color: #666666;
      font-size: 15px;
-     font-family: Arial,sans-serif;;
+     font-family: "Arimo", sans-serif;
      line-height: 1.80857;
 }
  a {
@@ -231,7 +231,6 @@
      color: #FFFFFF;
      font-size: 13px;
      padding: 2px 15px;
-     font-family: 'Poppins', sans-serif;
 }
  .offer-box li {
      font-weight: 600;
@@ -590,7 +589,6 @@
     }
 }
  .arrow::before{
-     font-family: 'FontAwesome';
      content: "\f0d7";
      margin-left: 5px;
      margin-top: 2px;
@@ -786,7 +784,6 @@
      opacity: 0.5;
 }
  .cover-slides h1{
-     font-family: revert;
      font-weight: 500;
      font-size: 64px;
      color: #fff;
@@ -960,7 +957,6 @@
 }
  .why-text h5{
      font-size: 18px;
-     font-family: 'Poppins', sans-serif;
      padding: 4px;
 	 display: inline-block;
 	 background: rgb(249 149 25);
@@ -1425,7 +1421,6 @@
      -ms-transition: all .3s ease-in-out;
 }
  .footer-link ul li a::before {
-     font-family: FontAwesome;
      position: absolute;
      left: 5px;
      line-height: 35px;
@@ -1828,7 +1823,6 @@
      transition: top .2s,-webkit-transform .2s;
      transition: transform .2s,top .2s;
      transition: transform .2s,top .2s,-webkit-transform .2s;
-     font-family: FontAwesome;
      content: "\f105";
 }
  .list-group-tree .list-group-collapse .list-group {
@@ -2669,7 +2663,6 @@
 }
 
 .title h2 {
-    font-family: 'UTM Neo Sans Intel B';
     font-size: 17px;
     color: #fff;
     margin: 0px 0px -1px 0px;
@@ -2773,7 +2766,7 @@
 }
 
 .product .list-pro .item .item-button {
-    text-align: justify;
+    text-align: center;
     width: 100%;
     margin: 15px 0px 0px 0px;
 }
@@ -2819,6 +2812,120 @@
 .card-item .active a{
     color: rgb(249 149 25);
 }
+
+.text-black {
+  color: #000; }
+
+
+.heading-contact {
+  font-size: 2rem;
+  font-weight: 700; }
+
+.contact-field {
+  border: none;
+  background: #f3f3f3; }
+  .contact-field:active, .contact-field:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #000;
+    background: #f3f3f3; }
+
+.col-form-label {
+  color: #000; }
+
+.btn-contact, .contact-field, .custom-select {
+  height: 50px; }
+
+.custom-select:active, .custom-select:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #000; }
+
+.btn-contact {
+  border: none;
+  border-radius: 4px !important; }
+  .btn-contact.btn-primary {
+    background: #000;
+    color: #fff;
+    padding: 15px 20px; }
+  .btn-contact:hover {
+    color: #fff; }
+  .btn-contact:active, .btn-contact:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+
+label.error {
+  font-size: 12px;
+  color: red; }
+
+#message {
+  resize: vertical; }
+
+#form-message-warning, #form-message-success {
+  display: none; }
+
+#form-message-warning {
+  color: #B90B0B; }
+
+#form-message-success h2{
+  color: rgb(249 149 25);
+  font-size: 18px;
+  font-weight: bold; }
+
+.submitting_contact {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000; }
+
+
+
+@media only screen and (max-width: 575px) {
+    .product .list-pro .item .thumblist img {
+         display: inline-flex;
+         margin: 3px 1px;
+         border: 1px solid #ddd;
+         border-radius: 3px!important;
+         max-height: 24px;
+         max-width: 24px;
+    }
+
+    .product .list-pro .item .item-button a {
+        margin: 0;
+        padding: 5px 10px;
+        color: #fff!important;
+        display: inline-block;
+        font-size: 10px;
+        border-radius: 2px;
+        font-weight: 550;
+        text-align: center;
+    }
+
+    .shop-cat-box a {
+        position: absolute;
+        z-index: 2;
+        bottom: 0px;
+        left: 0px;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        border: none;
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 12px 0px;
+    }
+}
+
+
+
 
 
 

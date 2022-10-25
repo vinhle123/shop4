@@ -146,3 +146,10 @@ function deleteProduct(id) {
   }
 }
 
+function deleteContact(id) {
+  let text = "Bạn có chắc muốn xóa liên hệ này ?";
+  if (confirm(text) == true) {
+     window.location = full_url + "contact/delete/" + id;
+  }
+}
+

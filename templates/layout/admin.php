@@ -45,6 +45,7 @@
                         <li class="nav-item <?php if($menu_active == 'products'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/admin', ['fullBase' => true]); ?>">Sản Phẩm</a></li>
                         <li class="nav-item <?php if($menu_active == 'category'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/categories/admin', ['fullBase' => true]); ?>">Thể Loại</a></li>
                         <li class="nav-item <?php if($menu_active == 'orders'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/carts/admin', ['fullBase' => true]); ?>">Đơn Hàng</a></li>
+                         <li class="nav-item <?php if($menu_active == 'contact'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/contact/admin', ['fullBase' => true]); ?>">Liên Hệ</a></li>
                         <li class="nav-item <?php if($menu_active == 'blogs'){ echo 'active';} ?>"><a class="nav-link" href="#">Blogs</a></li>
                     </ul>
                 </div>

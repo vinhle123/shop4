@@ -187,3 +187,80 @@
 
 	
 }(jQuery));
+
+
+    $(function() {
+    'use strict';
+    var contactForm = function() {
+        if ($('#contactForm').length > 0 ) {
+            $( "#contactForm" ).validate( {
+                rules: {
+                    name: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    phone: {
+                        required: true,
+              			digits: true
+                    },
+                    message: {
+                        required: true,
+                        minlength: 5
+                    }
+                },
+                messages: {
+                    name: "Vui lòng nhập họ tên",
+                    email: "Vui lòng điền địa chỉ email",
+                    phone: "Vui lòng nhập số điện thoại",
+                    message: "Vui lòng nhập nội dung"
+                },
+                submitHandler: function(form) {     
+                    var $submit = $('.submitting_contact'),
+                        waitText = 'Đang gửi...';
+
+                    $.ajax({    
+                      type: "POST",
+                      url: full_url + "home/contact",
+                      data: $(form).serialize(),
+
+                      beforeSend: function() { 
+                        $submit.css('display', 'block').text(waitText);
+                      },
+                      success: function(data) {
+                      	var json = $.parseJSON(data);
+                       if ( json.result == 1) {
+                            setTimeout(function(){
+                            $('#contactForm').fadeOut();
+                        }, 1000);
+                            setTimeout(function(){
+                               $('#form-message-success').fadeIn();   
+                        }, 1400);
+                           
+                        } else {
+                        	Swal.fire({
+								  icon: 'error',
+								  text: json.message,
+								  confirmButtonColor: '#3085d6',
+								  confirmButtonText: 'Đóng'
+							})
+                            $submit.css('display', 'none');
+                        }
+                      },
+                      error: function() {
+                        Swal.fire({
+								  icon: 'error',
+								  text: 'Đã có lỗi xảy ra vui lòng thử lại',
+								  confirmButtonColor: '#3085d6',
+								  confirmButtonText: 'Đóng'
+							})
+                         $submit.css('display', 'none');
+                      }
+                  });           
+                }
+                
+            } );
+        }
+    };
+    contactForm();
+});

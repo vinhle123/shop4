@@ -54,12 +54,13 @@
                     </div>
                 </div>
             </div>
+            <div class="clear"></div>
         <?php if(!empty($products)): ?>
             <div class="row special-list list-pro">
                 <?php
                    foreach($products as $product):
                 ?>
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                <div class="col-6 col-sm-3 special-grid top-featured">
                     <?php echo $this->element('product',array('product' => $product));  ?>
                 </div>
                 <?php endforeach; ?>
