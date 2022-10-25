@@ -174,6 +174,27 @@
       </div>
     </div>
 <!-- contact -->
+
+     <div class="hotline-phone-ring-wrap">
+        <div class="hotline-phone-ring">
+            <div class="hotline-phone-ring-circle">
+
+            </div>
+            <div class="hotline-phone-ring-circle-fill">
+
+            </div>                   
+            <div class="hotline-phone-ring-img-circle">
+                <a href="tel:SỐ ĐIỆN THOẠI" class="pps-btn-img">
+                    <img src="<?php echo $this->Url->webroot('/images/icon-call-nh.png'); ?>" alt="Gọi điện thoại" width="70">
+                </a>
+            </div>
+        </div>
+        <div class="hotline-bar">
+            <a href="tel:0327877576">
+                <span class="text-hotline">0327877576</span></a>
+            </div>
+        </div> 
+
     <ul class="giuseart-pc-contact-bar">
         <li class="facebook">
             <a href="https://m.me/jquangvinhle301" target="_blank" rel="nofollow"></a>

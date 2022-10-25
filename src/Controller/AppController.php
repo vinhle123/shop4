@@ -144,4 +144,11 @@ class AppController extends Controller
         }
         return implode($pass);
     }
+
+    public function _check_login(){
+        $session = $this->getRequest()->getSession();
+        if(empty($session->read('login'))){
+            $this->redirect('/users/login');
+        }
+    }
 }

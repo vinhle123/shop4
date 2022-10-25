@@ -221,7 +221,7 @@
 
                     $.ajax({    
                       type: "POST",
-                      url: full_url + "home/contact",
+                      url: full_url + "/contact/save",
                       data: $(form).serialize(),
 
                       beforeSend: function() { 

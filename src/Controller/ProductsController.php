@@ -65,8 +65,8 @@ class ProductsController extends AppController
 
     public function admin()
     {   
+        $this->_check_login();
         $this->viewBuilder()->setLayout('admin');
-
         $this->loadModel('Products');
         //$this->loadModel('Categories');
         // $av = $this->Products->find('all')->all();
@@ -94,6 +94,7 @@ class ProductsController extends AppController
     }
 
     public function create($id = null){
+       $this->_check_login();
        $this->viewBuilder()->setLayout('admin');
        $this->loadModel('Categories');
        $query = $this->Categories->find('list');
@@ -125,6 +126,7 @@ class ProductsController extends AppController
 
     public function save()
     {   
+        $this->_check_login();
         $this->autoRender = false;
         $data = $this->request->getData();
         if(empty($data['name'])){
@@ -252,6 +254,7 @@ class ProductsController extends AppController
     }
 
     public function delete($id = 0){
+        $this->_check_login();
         $this->autoRender = false;
         $path = WWW_ROOT.'photos'.DS.$id;
         if(file_exists($path)){

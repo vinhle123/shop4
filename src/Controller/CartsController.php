@@ -6,6 +6,7 @@ class CartsController extends AppController
 
     public function admin(){
         $this->viewBuilder()->setLayout('admin');
+        $this->_check_login();
         $this->loadModel('Orders');
         $this->loadModel('OrderItems');
         $cond = array();
@@ -47,6 +48,7 @@ class CartsController extends AppController
 
      public function detail($id=null){
         $this->viewBuilder()->setLayout('admin');
+        $this->_check_login();
         $this->loadModel('Orders');
         $this->loadModel('OrderItems');
 

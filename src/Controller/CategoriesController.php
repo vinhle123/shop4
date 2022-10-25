@@ -5,7 +5,7 @@ class CategoriesController extends AppController
    
    
     public function admin()
-    {   
+    {   $this->_check_login();
         $this->viewBuilder()->setLayout('admin');
 
         $this->loadModel('Categories');
@@ -42,6 +42,7 @@ class CategoriesController extends AppController
     }
 
     public function create($id = null){
+        $this->_check_login();
        $this->viewBuilder()->setLayout('admin');
     
        $this->set('id',$id);
@@ -55,7 +56,7 @@ class CategoriesController extends AppController
     }
 
     public function save()
-    {   
+    {   $this->_check_login();
         $this->autoRender = false;
         $data = $this->request->getData();
 
@@ -134,6 +135,7 @@ class CategoriesController extends AppController
         echo $this->vnstring($name);
     }
     public function delete($id = 0){
+        $this->_check_login();
         $this->autoRender = false;
         $this->loadModel('Products');
         $check = $this->Products->find()->where(['id_category' => $id])->first();

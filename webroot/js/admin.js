@@ -118,7 +118,38 @@ $('#btn_save_cate').click(function(){
 						}
 					});
 		  }
-	});	
+	});
+
+
+	$('.btn_login').click(function(){
+		button = $(this);
+	    button.addClass('disabled');
+		var thisBtn = $(this);
+    var thisForm = thisBtn.closest("form");
+		var formData = new FormData(thisForm[0]);
+	    $.ajax({
+	        type: "POST",
+	        url: full_url + "users/checklogin",
+	        data: formData,
+	        processData: false,
+	        contentType: false,
+	        success:function(data){
+	           var json = $.parseJSON(data);
+		        if ( json.result == 1 )
+		        {
+							window.location = full_url + "admin";
+		        }
+		        else
+		        {
+		            button.removeClass('disabled');
+		            $(".error-message").show();
+		            $(".error-message").html(json.message);
+		        }
+	        }
+	    });
+	});
+
+
 
 });
 

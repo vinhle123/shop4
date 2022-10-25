@@ -60,7 +60,7 @@
               </form>
                <div id="form-message-success">
                     <h2> Thông tin của quý khác hàng đã được gửi và chúng tôi sẽ cố gắn phản hồi sớm nhất.</h2>
-                    Cảm ơn quý khách hàng đã quan tâm đến sản phẩm của Lộc Thiên Thảo!
+                    <p>Cảm ơn quý khách hàng đã quan tâm đến sản phẩm của Lộc Thiên Thảo!</p>
                 </div>
             </div>
           </div>

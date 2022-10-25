@@ -35,4 +35,8 @@
         </div>
     </main>   
 </body>
+<script type="text/javascript">
+    var full_url = "<?php  echo  $this->Url->build('/', ['fullBase' => true]); ?>";
+</script>
+ <?php echo $this->Html->script(['jquery-3.2.1.min','popper.min','bootstrap.min','jquery.superslides.min','bootstrap-select','inewsticker','bootsnav','images-loded.min','isotope.min','owl.carousel.min','baguetteBox.min','form-validator.min','contact-form-script','custom','admin']); ?>
 </html>
