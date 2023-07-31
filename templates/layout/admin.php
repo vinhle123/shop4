@@ -6,7 +6,7 @@
     <title>
         <?php if (isset($title_for_layout) && $title_for_layout){ echo $title_for_layout; } ?>
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <!-- <?= $this->Html->meta('icon') ?> -->
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
@@ -17,7 +17,7 @@
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 
-    <link rel="shortcut icon" href="<?php echo $this->Url->webroot('images/favicon.ico'); ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo $this->Url->webroot('images/icon.ico'); ?>" type="image/x-icon">
     <link rel="apple-touch-icon" href="<?php echo $this->Url->webroot('images/apple-touch-icon.png'); ?>">
    
 
@@ -46,7 +46,7 @@
                         <li class="nav-item <?php if($menu_active == 'category'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/categories/admin', ['fullBase' => true]); ?>">Thể Loại</a></li>
                         <li class="nav-item <?php if($menu_active == 'orders'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/carts/admin', ['fullBase' => true]); ?>">Đơn Hàng</a></li>
                          <li class="nav-item <?php if($menu_active == 'contact'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/contact/admin', ['fullBase' => true]); ?>">Liên Hệ</a></li>
-                        <li class="nav-item <?php if($menu_active == 'blogs'){ echo 'active';} ?>"><a class="nav-link" href="#">Blogs</a></li>
+                        <li class="nav-item <?php if($menu_active == 'blogs'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/blogs/admin', ['fullBase' => true]); ?>">Blogs</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

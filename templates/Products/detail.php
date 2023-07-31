@@ -14,7 +14,6 @@ $helper = $this->loadHelper("core");
         </div>
     </div>
 </div>
-<?php echo $product['id'];  ?>
 <div class="shop-detail-box-main">
     <div class="container">
         <div class="row">

@@ -13,14 +13,14 @@
     <title>
         <?php if (isset($title_for_layout) && $title_for_layout){ echo $title_for_layout; } ?>
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <!-- <?= $this->Html->meta('icon') ?> -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <?= $this->Html->css(['bootstrap.min', 'style', 'responsive','custom','cart']) ?>
+    <?= $this->Html->css(['bootstrap.min', 'style', 'responsive','slick','slick-theme.min','custom','cart']) ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 
-    <link rel="shortcut icon" href="<?php echo $this->Url->webroot('images/favicon.ico'); ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo $this->Url->webroot('images/icon.ico'); ?>" type="image/x-icon">
     <link rel="apple-touch-icon" href="<?php echo $this->Url->webroot('images/apple-touch-icon.png'); ?>">
 
 <?php 
@@ -43,17 +43,19 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item <?php if($menu_active == 'home'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/', ['fullBase' => true]); ?>">Trang chủ</a></li>
-                        <li class="nav-item <?php if($menu_active == 'about'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/gioi-thieu', ['fullBase' => true]); ?>">Giới Thiệu</a></li>
                         <li class="dropdown <?php if($menu_active == 'product'){ echo 'active';} ?>">
-                            <a href="<?php echo $this->Url->build('/san-pham', ['fullBase' => true]); ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản Phẩm</a>
+                            <a href="<?php echo $this->Url->build('/san-pham', ['fullBase' => true]); ?>" class="nav-link" data-toggle="dropdown">Sản Phẩm</a>
                             <?php if(!empty($cates)): ?>
                             <ul class="dropdown-menu">
                                 <?php foreach($cates as $ctes): ?>
                                 <li><a href="<?php echo $this->Url->build('/the-loai/'.$ctes['name_key'], ['fullBase' => true]); ?>"><?php echo $ctes['name']; ?></a></li>
                                 <?php endforeach; ?>
+                                <li><a href="<?php echo $this->Url->build('/san-pham', ['fullBase' => true]); ?>">Xem Tất Cả</a></li>
                             </ul>
                             <?php endif; ?>
                         </li>
+                        <li class="nav-item <?php if($menu_active == 'blog'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/thong-tin', ['fullBase' => true]); ?>">Sức Khỏe</a></li>
+                        <li class="nav-item <?php if($menu_active == 'about'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/gioi-thieu', ['fullBase' => true]); ?>">Giới Thiệu</a></li>
                         <li class="nav-item <?php if($menu_active == 'contact'){ echo 'active';} ?>"><a class="nav-link" href="<?php echo $this->Url->build('/lien-he', ['fullBase' => true]); ?>">Liên Hệ</a></li>
                     </ul>
                 </div>
@@ -103,10 +105,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div style="padding-bottom: 10px;">
+                            <div class="fb-page" data-href="https://www.facebook.com/locthienthao" data-tabs="events" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/locthienthao" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/locthienthao">LỘC THIÊN THẢO</a></blockquote></div>
+                            <div id="fb-root"></div>
+                            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0" nonce="69kw2o7r"></script>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-top-box">
-                            <h3>Thời gian hoạt động</h3>
+                            <h3>Mở cửa</h3>
                             <ul class="list-time">
-                                <li>Thứ 2 - Chủ nhật: 08.00 - 20.00</li>
+                                <li>Thứ 2 - CN: 08H - 20H</li>
                             </ul>
                         </div>
                     </div>
@@ -115,31 +124,25 @@
                             <h4>Liên Hệ</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Quận 7, TP.HMC</p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Số 30 đường C, Cảnh Viên 2, P.Tân Phú, Quận 7, TP.HCM</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">0123456789</a></p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Showroom: 263 Phạm Hữu Lầu, Nhà Bè, TP.HCM</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>Địa điểm nuôi trồng: 2/48 Đường 2 Tháng 9, P.Mỹ Phước, TX.Bến Cát, Bình Dương</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:<?php echo SDT; ?>"><?php echo SDT; ?></a></p>
                                 </li>
                                 <li>
                                     <p><i class="fas fa-envelope"></i>Email: <a href="mailto:locthienthao.contact@gmail.com">locthienthao.contact@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
-                        <div class="footer-top-box">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-
                     </div>
 
-                     <div class="col-lg-4 col-md-12 col-sm-12">
+                    <!-- <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
                             <h4>Chính sách bán hàng</h4>
                             <ul>
@@ -150,7 +153,7 @@
                                 <li><a href="#">- Bảo mật thông tin</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -190,29 +193,29 @@
             </div>
         </div>
         <div class="hotline-bar">
-            <a href="tel:0327877576">
-                <span class="text-hotline">0327877576</span></a>
+            <a href="<?php echo 'tel:'.SDT; ?>">
+                <span class="text-hotline"><?php echo SDT; ?></span></a>
             </div>
         </div> 
 
     <ul class="giuseart-pc-contact-bar">
         <li class="facebook">
-            <a href="https://m.me/jquangvinhle301" target="_blank" rel="nofollow"></a>
+            <a href="https://m.me/locthienthao" target="_blank" rel="nofollow"></a>
         </li>
         <li class="zalo">
-            <a href="https://zalo.me/0327877576" target="_blank" rel="nofollow"></a>
+            <a href="https://zalo.me/<?php echo SDT; ?>" target="_blank" rel="nofollow"></a>
         </li>
     </ul>
 
     <ul class="giuseart-mobile-contact-bar">
         <li class="facebook">
-            <a href="https://m.me/quangvinhle301" target="_blank" rel="nofollow"></a>
+            <a href="https://m.me/locthienthao" target="_blank" rel="nofollow"></a>
         </li>
         <li class="zalo">
-            <a href="https://zalo.me/0327877576" target="_blank" rel="nofollow"></a>
+            <a href="https://zalo.me/<?php echo SDT; ?>" target="_blank" rel="nofollow"></a>
         </li>
         <li class="hotline">
-            <a href="tel:0327877576" target="_blank" rel="nofollow"></a>
+            <a href="tel:<?php echo SDT; ?>" target="_blank" rel="nofollow"></a>
         </li>
     </ul>
 
@@ -220,6 +223,6 @@
      var full_url = "<?php  echo  $this->Url->build('/', ['fullBase' => true]); ?>";
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <?php echo $this->Html->script(['jquery-3.2.1.min','popper.min','bootstrap.min','jquery.superslides.min','bootstrap-select','inewsticker','bootsnav','images-loded.min','isotope.min','owl.carousel.min','baguetteBox.min','form-validator.min','custom','cart','jquery.validate.min']); ?>
+    <?php echo $this->Html->script(['jquery-3.2.1.min','popper.min','bootstrap.min','jquery.superslides.min','bootstrap-select','inewsticker','bootsnav','images-loded.min','isotope.min','owl.carousel.min','baguetteBox.min','form-validator.min','slick-1.8.1.min','custom','cart','jquery.validate.min']); ?>
 </body>
 </html>

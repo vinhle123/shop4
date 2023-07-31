@@ -63,6 +63,8 @@ return static function (RouteBuilder $routes) {
         $builder->connect('/the-loai/*', ['controller' => 'Products', 'action' => 'category']);
         $builder->connect('/gio-hang', ['controller' => 'Carts', 'action' => 'cart']);
         $builder->connect('/tim-kiem', ['controller' => 'Products', 'action' => 'search']);
+        $builder->connect('/thong-tin', ['controller' => 'Blogs', 'action' => 'index']);
+        $builder->connect('/thong-tin/*', ['controller' => 'Blogs', 'action' => 'detail']);
 
 
         $builder->connect('/admin', ['controller' => 'Products', 'action' => 'admin']);

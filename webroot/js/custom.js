@@ -264,3 +264,28 @@
     };
     contactForm();
 });
+
+$('.product-view-auto').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        speed: 300,
+        infinite: true,
+        autoplaySpeed: 1500,
+        autoplay: false,
+        responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
+});

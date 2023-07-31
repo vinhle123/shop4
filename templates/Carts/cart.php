@@ -89,7 +89,7 @@ $helper = $this->loadHelper("core");
                           <p class="mb-1"><strong>Công ty Lộc Thiên Thảo</strong><i class="fal fa-shield-check float-right text-success"></i></p>
                       </div>
                         <p><i class="fas fa-angle-right"></i> Tên TK Cá nhân: Nguyễn Văn Nhân</p>
-                        <p><i class="fas fa-angle-right"></i> Số TK Công ty: 543212345</p>
+                        <p><i class="fas fa-angle-right"></i> Số TK: <b>0111000166438</b> hoặc <b>LOCTHIENTHAO</b></p>
                         <p><i class="fas fa-angle-right"></i> Ngân hàng: Vietcombank</p>
                         <p><i class="fas fa-angle-right"></i> Nội dung thanh toán: <span id="contenttransferbankcompany">Số điện thoại - <?php echo $code; ?></span></p>
                  
@@ -98,7 +98,7 @@ $helper = $this->loadHelper("core");
                         <div class="w-100">
                           <p class="mb-1"><strong>Công ty Lộc Thiên Thảo</strong><i class="fal fa-shield-check float-right text-success"></i></p>
                       </div>
-                        <p><i class="fas fa-angle-right"></i> Số điện thoai: 01234556</p>
+                        <p><i class="fas fa-angle-right"></i> Số điện thoai: 0988277512</p>
                         <p><i class="fas fa-angle-right"></i> Tên TK Cá nhân: Nguyễn Văn Nhân</p>
                         <p><i class="fas fa-angle-right"></i> Nội dung: <span id="contenttransferbankcompany">Số điện thoại - <?php echo $code; ?></span></p>
                  

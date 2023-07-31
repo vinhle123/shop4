@@ -1,5 +1,5 @@
 <div>
-	     <!-- Start Slider -->
+         <!-- Start Slider -->
     <div id="slides-shop" class="cover-slides">
         <ul class="slides-container">
             <li class="text-center">
@@ -72,7 +72,7 @@
     <!-- End Products  -->
 
 
-	<!-- Start Categories  -->
+    <!-- Start Categories  -->
     <?php if(!empty($categories)): ?>
         <div class="categories-shop">
             <div class="container">
@@ -91,7 +91,7 @@
     <?php endif; ?>
     <!-- End Categories -->
     
-	<div class="box-add-products">
+    <div class="box-add-products">
         <div class="container">
             "Chúng tôi hạ giá thành sản phẩm, đồng nghĩa là giảm lợi nhuận để sản phẩm đến với người tiêu dùng dễ dàng hơn. Và điều này không có nghĩa là đông trùng hạ thảo của Lộc Thiên Thảo sẽ kém chất lượng.
         </div>

@@ -22,7 +22,7 @@ class ContactController extends AppController
         $contacts = $this->paginate($this->Contact);
         $this->set('contacts',$contacts);
         $this->set('title_for_layout','contact');
-        $this->set('menu_active','orders');
+        $this->set('menu_active','contact');
     }
 
     public function delete($id = 0){

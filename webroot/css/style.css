@@ -2733,8 +2733,8 @@
     margin: 3px 1px;
     border: 1px solid #ddd;
     border-radius: 3px!important;
-    max-height: 41px;
-    max-width: 41px;
+    height: 41px;
+    width: 41px;
 }
 
 .product .list-pro .item .item-info-group {
@@ -2777,6 +2777,7 @@
 }
 
 .product .list-pro .item .item-button a.item-phone {
+    border-radius: 10px;
     background: rgb(249 149 25);
 }
 
@@ -2800,11 +2801,10 @@
 }
 
 .product .list-pro .item .item-image img{
-   max-width: 248px;
-   max-height: 165px;
+   height: 165px;
 }
 
- .ins-inner-box img{
+.ins-inner-box img{
     max-width: 350px;
     max-height: 230px;
 }
@@ -2893,8 +2893,8 @@ label.error {
          margin: 3px 1px;
          border: 1px solid #ddd;
          border-radius: 3px!important;
-         max-height: 24px;
-         max-width: 24px;
+         height: 24px;
+         width: 24px;
     }
 
     .product .list-pro .item .item-button a {
@@ -2923,6 +2923,8 @@ label.error {
         padding: 12px 0px;
     }
 }
+
+.slick-slide{padding: 0 15px;}
 
 
 

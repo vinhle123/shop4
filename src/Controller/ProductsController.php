@@ -167,7 +167,7 @@ class ProductsController extends AppController
 
         
 
-        if(empty($data['name']) && empty($data['photo_main']->getClientFilename())){
+        if(empty($data['id']) &&  empty($data['photo_main']->getClientFilename())){
             $this->_jsonError('Vui lòng tải ảnh chính');exit(); 
         }
 
@@ -250,7 +250,7 @@ class ProductsController extends AppController
     public function replacename($name = null)
     {
         $this->autoRender = false;
-        echo $this->vnstring($name);
+        echo $this->vnstring(trim($name));
     }
 
     public function delete($id = 0){

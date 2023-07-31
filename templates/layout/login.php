@@ -6,7 +6,7 @@
     <title>
         <?php if (isset($title_for_layout) && $title_for_layout){ echo $title_for_layout; } ?>
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <!-- <?= $this->Html->meta('icon') ?> -->
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
@@ -17,7 +17,7 @@
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 
-    <link rel="shortcut icon" href="<?php echo $this->Url->webroot('images/favicon.ico'); ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo $this->Url->webroot('images/icon.ico'); ?>" type="image/x-icon">
     <link rel="apple-touch-icon" href="<?php echo $this->Url->webroot('images/apple-touch-icon.png'); ?>">
    
 

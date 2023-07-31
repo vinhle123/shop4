@@ -23,6 +23,7 @@ $(document).ready(function(){
       });
 	}
 
+
 	$('#btn_save').click(function(){
 		button = $(this);
 	    button.addClass('disabled');
@@ -161,6 +162,13 @@ function deleteProduct(id) {
   }
 }
 
+function deleteBlog(id) {
+  let text = "Bạn có chắc muốn xóa bài viết này";
+  if (confirm(text) == true) {
+     window.location = full_url + "blogs/delete/" + id;
+  }
+}
+
 
 
 
@@ -183,4 +191,59 @@ function deleteContact(id) {
      window.location = full_url + "contact/delete/" + id;
   }
 }
+
+if($('#mytextareablog').length > 0){
+	tinymce.init({
+        selector: '#mytextareablog',
+        images_upload_url: full_url + "blogs/upload",
+        relative_urls : false,
+remove_script_host : false,
+convert_urls : true,
+			  height: 800,
+			  plugins: [
+			    'advlist autolink link image lists charmap print preview hr anchor pagebreak',
+			    'searchreplace wordcount visualblocks code fullscreen insertdatetime media nonbreaking',
+			    'table emoticons template paste help'
+			  ],
+			  toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | ' +
+			    'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+			    'forecolor backcolor emoticons | help',
+			  menu: {
+			    favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
+			  },
+			  menubar: 'favs file edit view insert format tools table help',
+			  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+      });
+	}
+
+	$('#btn_save_blogs').click(function(){
+		button = $(this);
+	    button.addClass('disabled');
+	    $('#mytextareablog').val(tinyMCE.activeEditor.getContent());
+		var thisBtn = $(this);
+    	var thisForm = thisBtn.closest("form");
+		var formData = new FormData(thisForm[0]);
+	    $.ajax({
+	        type: "POST",
+	        url: full_url + "blogs/save",
+	        data: formData,
+	        processData: false,
+	        contentType: false,
+	        success:function(data){
+	           var json = $.parseJSON(data);
+		        if ( json.result == 1 )
+		        {
+					window.location = full_url + "blogs/admin";
+		        	
+		        }
+		        else
+		        {
+		            button.removeClass('disabled');
+		            $(".error-message").show();
+		            $(".error-message").html(json.message);
+		        }
+	        }
+	    });
+	});
+
 
