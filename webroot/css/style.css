@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
 /*
@@ -34,7 +35,7 @@
  body {
      color: #666666;
      font-size: 15px;
-     font-family: "Arimo", sans-serif;
+     font-family: "Roboto", sans-serif;
      line-height: 1.80857;
 }
  a {
@@ -391,6 +392,7 @@
      nav.navbar.bootsnav.navbar-transparent.dark .attr-nav > ul > li > a, nav.navbar.bootsnav.navbar-transparent.dark ul.nav > li > a{
          color: #eee;
     }
+
 }
  @media (max-width: 992px) {
     /* Navbar General ------*/
@@ -505,7 +507,7 @@
      position: relative;
      font-weight: 700;
      font-size: 16px;
-     color: #000000;
+     color: #fff;
 	 text-transform: uppercase;
      padding-top: 10px;
      padding-bottom: 10px;
@@ -582,10 +584,20 @@
      nav.navbar.navbar-inverse.navbar-mobile .navbar-collapse{
          background-color: #222;
     }
+
+    .list-blog img {
+        width: 100% !important;
+        height: 200px !important;
+    }
 }
  @media (max-width: 767px) {
-     nav.navbar.navbar-inverse.navbar-mobile ul.nav{
+    nav.navbar.navbar-inverse.navbar-mobile ul.nav{
          border-top: solid 1px #222;
+    }
+
+    .list-blog img {
+        width: 100% !important;
+        height: 150px !important;
     }
 }
  .arrow::before{
@@ -606,6 +618,7 @@
      display: block;
 	 padding: 6px 25px;
      font-size: 18px;
+     color: #fff;
 }
 
  nav.navbar.bootsnav ul.navbar-nav li.dropdown ul.dropdown-menu li a:hover{
@@ -771,8 +784,7 @@
      align-items: center;
 }
  .cover-slides .container > .row {
-     height: 100%;
-     padding-top: 100px;
+    height: 100%;
 }
  .overlay-background {
      background: #333;
@@ -810,7 +822,7 @@
 }
 /*------------------------------------------------------------------ Categories Shop -------------------------------------------------------------------*/
  .categories-shop{
-     padding: 50px 0px 0px 0px;
+     padding: 20px 0px 0px 0px;
 }
  .shop-cat-box{
      margin-bottom: 30px;
@@ -856,7 +868,7 @@
 }
 
 .box-add-products{
-	padding: 70px 0px;
+	padding: 40px 0px;
 	background-color: #f4f4f4;
 }
 
@@ -881,10 +893,11 @@
  .title-all{
      margin-bottom: 10px;
 }
- .title-all h1{
-     font-size: 32px;
+ .title-all h2{
+     font-size: 28px;
      font-weight: 700;
-     color: #000000;
+     color: rgb(249 149 25);
+     padding: 0px;
 }
  .title-all p{
      color: #999999;
@@ -1095,7 +1108,7 @@
 
 /*------------------------------------------------------------------ Blog -------------------------------------------------------------------*/
  .latest-blog{
-     padding: 70px 0px;
+     padding: 0px;
      background: #f5f5f5;
 }
  .blog-box{
@@ -1103,6 +1116,7 @@
      box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
      background: #ffffff;
      margin-bottom: 30px;
+     border-radius: 15px;
 }
  .blog-content{
      position: relative;
@@ -2635,6 +2649,7 @@
     cursor: pointer;
     padding: 5px 30px;
     font-size: 18px;
+    border-radius: 15px;
 }
 
 @media (max-width: 767px) {
@@ -2652,7 +2667,7 @@
 .product .list-pro {
     list-style: none;
     width: 100%;
-    margin: 20px 0px;
+    margin: 10px 0px;
     padding: 0px;
 }
 
@@ -2702,8 +2717,8 @@
     width: 100%;
     float: left;
     margin: 15px auto;
-    border-radius: 3px;
-    box-shadow: 0px 0px 3px 1px rgb(0 0 0 / 10%);
+    border-radius: 15px!important;
+    box-shadow: 0px 0px 3px 5px rgb(0 0 0 / 10%);
 }
 .product .list-pro .item .item-image {
     position: relative;
@@ -2802,7 +2817,9 @@
 
 .product .list-pro .item .item-image img{
    height: 165px;
+   border-radius: 10px 10px 0px 0px;
 }
+
 
 .ins-inner-box img{
     max-width: 350px;
@@ -2925,6 +2942,33 @@ label.error {
 }
 
 .slick-slide{padding: 0 15px;}
+
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a {
+    color: #fff;
+    padding: 5px 10px;
+}
+
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+    border-radius: 5px;
+}
+
+.blog-img img{
+    border-radius: 15px 15px 0px 0px;
+}
+
+.nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu > li > a{
+    color: #fff !important;
+}
+
+
+ @media (min-width: 993px) {
+
+    .list-blog img{
+        width: 100%;
+        height: 260px;
+    }
+}
+
 
 
 

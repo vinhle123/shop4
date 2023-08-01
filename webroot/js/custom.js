@@ -31,7 +31,7 @@
 	$('#slides-shop').superslides({
 		inherit_width_from: '.cover-slides',
 		inherit_height_from: '.cover-slides',
-		play: 500000,
+		play: 30000,
 		animation: 'fade',
 	});
 

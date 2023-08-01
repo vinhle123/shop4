@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>Bán Chạy & Khuyến Mãi</h1>
+                        <h2>Bán Chạy & Khuyến Mãi</h2>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>Thông Tin Thêm</h1>
+                        <h2>Thông Tin Thêm</h2>
                         <p>Giới thiệu về đông trùng hạ thảo</p>
                     </div>
                 </div>

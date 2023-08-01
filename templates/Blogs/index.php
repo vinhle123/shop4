@@ -27,7 +27,7 @@ $helper = $this->loadHelper("core");
                     <?php
                     foreach($blogs as $blog):
                         ?>
-                        <div class="col-sm-4 col-xs-12">
+                        <div class="col-sm-4 col-6">
                          <?php echo $this->element('blog',array('blog' => $blog));  ?>
                      </div>
                  <?php endforeach; ?> 

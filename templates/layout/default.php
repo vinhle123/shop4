@@ -31,13 +31,13 @@
 </head>
 <body>
     <header class="main-header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-default bootsnav main-header-sub">
             <div class="container">
                 <div class="navbar-header">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="<?php echo $this->Url->build('/', ['fullBase' => true]); ?>"><img src="<?php echo $this->Url->webroot('images/logo.png'); ?>" alt="<?php echo TITLE_HOME; ?>" >
+                    <a class="navbar-brand banner-logo" href="<?php echo $this->Url->build('/', ['fullBase' => true]); ?>"><img src="<?php echo $this->Url->webroot('images/logo.png'); ?>" alt="<?php echo TITLE_HOME; ?>" >
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-menu">
