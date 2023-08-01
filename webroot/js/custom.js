@@ -265,7 +265,8 @@
     contactForm();
 });
 
-$('.product-view-auto').slick({
+if($('.product-view-auto').length > 0){
+	$('.product-view-auto').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
@@ -273,7 +274,7 @@ $('.product-view-auto').slick({
         speed: 300,
         infinite: true,
         autoplaySpeed: 1500,
-        autoplay: false,
+        autoplay: true,
         responsive: [
       {
         breakpoint: 991,
@@ -289,3 +290,4 @@ $('.product-view-auto').slick({
       }
     ]
 });
+}

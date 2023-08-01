@@ -297,3 +297,7 @@
 .list-blog .item .item-image img{
     border-radius: 15px;
 }
+
+.blog-content img{
+    max-width: 100%;
+}

@@ -19,7 +19,7 @@ $helper = $this->loadHelper("core");
     <div>
         <h2><a href="javascript:void(0)"><?php echo ucfirst($blog['title']); ?></a></h2>
     </div>    
-    <div>
+    <div class="blog-content">
         <?php echo $blog['description']; ?>
     </div>   
 <?php if(!empty($product_mores)): ?>
