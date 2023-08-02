@@ -18,5 +18,6 @@ define('STATUS_CONFIRM', 1);
 define('STATUS_SUCCESS', 2);
 
 define('SDT', '0869698960');
+define('SDT2', '0933177659');
 
 

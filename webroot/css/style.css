@@ -430,6 +430,10 @@
          top: 0;
          padding-top: 10px;
     }
+
+    .noo-sh-title-top{
+        padding-top: 10px;
+    }
 }
 /* Navbar Inverse =================================*/
  nav.navbar.navbar-inverse{
@@ -503,7 +507,7 @@
      background-color: #222 !important;
      color: #6f6f6f;
 }
- nav.navbar.bootsnav ul.nav > li > a{
+ nav.navbar.main-header-sub ul.nav > li > a{
      position: relative;
      font-weight: 700;
      font-size: 16px;
@@ -1249,7 +1253,7 @@
 }
  .hov-in{
      opacity: 0;
-     background: rgba(211,59,51, 0.5);
+     background: rgba(249,149,25, 0.5);
      bottom: -100%;
      position: absolute;
      width: 100%;
@@ -1268,7 +1272,7 @@
      height: 100%;
 }
  .hov-in i{
-     color: #000000;
+     color: #ffffff;
      font-size: 25px;
      position: relative;
      z-index: 2;
@@ -1276,9 +1280,10 @@
     border: 1px;
     padding: 5px;
     border-color: #fff;
+    font-weight: bold;
 }
  .hov-in a i:hover{
-     color: #ffffff;
+     color: #000000;
 }
  .ins-inner-box:hover .hov-in{
      bottom: 0;
@@ -1525,7 +1530,7 @@
      background-size: cover;
      text-align: center;
      background-attachment: fixed;
-     padding: 70px 0px;
+     padding: 30px 0px;
      position: relative;
 }
  .all-title-box::before{
@@ -1551,6 +1556,8 @@
      display: inline-block;
      border-radius: 0px;
 	 float: right;
+     border-radius: 10px;
+     padding: 6px;
 }
  .all-title-box .breadcrumb li{
      display: inline-block;
@@ -2509,6 +2516,7 @@
      position: relative;
      bottom: 0;
      background: #000000;
+     margin-top: 10px;
 }
  .carousel-indicators li{
      width: 30%;
@@ -2674,7 +2682,8 @@
 .title {
     width: 100%;
     margin: 0px auto 10px auto;
-    border-bottom: 1px dotted rgb(249 149 25);
+    border-bottom: 2px dotted rgb(249 149 25);
+    padding-bottom: 6px;
 }
 
 .title h2 {
@@ -2686,6 +2695,7 @@
     padding: 0;
     background: rgb(249 149 25);
     display: inline-block;
+    border-radius: 10px;
 }
 
 .title h2 img {
@@ -2704,6 +2714,7 @@
     padding: 12px 18px 12px 8px;
     border-left: 0px solid rgb(255, 146, 0);
     margin-bottom: -1px;
+    border-radius: 10px;
 }
 
 .title .viewall {
@@ -2801,9 +2812,8 @@
     padding: 9px 16px;
     color: #fff!important;
     display: inline-block;
-    font-size: 15px;
+    font-size: 13px;
     border-radius: 2px;
-    font-weight: 550;
     text-align: center;
 }
 
@@ -2822,8 +2832,8 @@
 
 
 .ins-inner-box img{
-    max-width: 350px;
-    max-height: 230px;
+    width: 320px;
+    height: 210px;
 }
 
 .card-item .active a{
@@ -2919,9 +2929,9 @@ label.error {
         padding: 5px 10px;
         color: #fff!important;
         display: inline-block;
-        font-size: 10px;
+        font-size: 12px;
         border-radius: 2px;
-        font-weight: 550;
+        font-weight: bold;
         text-align: center;
     }
 
@@ -2939,9 +2949,74 @@ label.error {
         font-weight: 700;
         padding: 12px 0px;
     }
+
+    .card-item .search a i, .card-item .side-menu  a i{
+        font-size: 22px;
+        padding-right: 5px;
+    }
+
+    .list-pro .item-pro{
+       font: bold 13px/25px arial;
+       padding-left: 5px;
+       padding-right: 5px;
+    }
+
+    .product .list-pro .item .item-image img {
+        height: 150px;
+    }
+
+    .product .list-pro .item .item-info-group .name{
+        font-weight: bold;
+        padding-bottom: 0px;
+        font-size: 13px;
+    }
+
+    .product .list-pro .item .group-price .price{
+        font: 750 15px/1.5em "Open Sans",Arial,san-serifsans-serif;
+    }
+
+    .product .list-pro .item .item-button {
+            text-align: center;
+            width: 100%;
+            margin: 10px 0px 0px 0px;
+    }
+
+    .single-product-details .quantity-box{
+        text-align: center;
+    }
+
+
+    .single-product-details .price-box-bar .cart-and-bay-btn{
+        display: flex;
+        justify-content: center;
+    }
+
+    .single-product-details .price-box-bar .cart-and-bay-btn a{
+        margin: 5px;
+        width: 100%;
+    }
+
+    .table td{
+        padding: 0.1rem;
+    }
+
+    .ins-inner-box img{
+        height: 150px;
+    }
+
+    .footer-main{
+        padding: 20px 0px;
+    }
+
+    .shop-cat-box-cate a{
+        font-size: 15px !important;
+    }
+
 }
 
-.slick-slide{padding: 0 15px;}
+.slick-slide{
+    padding: 0 15px;
+}
 
 nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a {
     color: #fff;
@@ -2965,8 +3040,16 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
 
     .list-blog img{
         width: 100%;
-        height: 260px;
+        height: 220px;
     }
+}
+
+.carousel-item img{
+    border-radius: 15px;
+}
+
+.banner-frame .img-fluid{
+    border-radius: 15px;
 }
 
 

@@ -30,7 +30,7 @@
 <body>
     <header class="main-header">
         <!-- Start Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav menu-admin">
             <div class="container">
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">

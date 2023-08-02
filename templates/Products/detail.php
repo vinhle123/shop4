@@ -17,7 +17,7 @@ $helper = $this->loadHelper("core");
 <div class="shop-detail-box-main">
     <div class="container">
         <div class="row">
-            <div class="col-5  col-sm-6">
+            <div class="col-12  col-sm-6">
                 <div id="<?php echo $product['name_key']; ?>" class="single-product-slider carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active"> <img class="d-block w-100" src="<?php echo $this->Url->build('/webroot/photos/'.$product['id'].'/'.$product['photo'], ['fullBase' => false]); ?>" alt="<?php echo $product['name']; ?>"> </div>
@@ -46,7 +46,7 @@ $helper = $this->loadHelper("core");
                     </ol>
                 </div>
             </div>
-            <div class="col-7 col-sm-6">
+            <div class="col-12 col-sm-6">
                 <div class="single-product-details">
                     <h2><?php echo $product['name'].' ('.$product['unit'].')'; ?></h2>
                     <?php if(!empty($product['type']) && $product['type'] == 1 && !empty($product['price_disscount'])): ?>
@@ -76,10 +76,10 @@ $helper = $this->loadHelper("core");
     </div>
 </div>
 <?php if(!empty($product_mores)): ?>
-    <div class="row my-5">
+    <div class="row my-3">
         <div class="col-lg-12">
             <div class="title-all text-center">
-                <h1>Sản Phẩm Liên Quan</h1>
+                <h2>Sản Phẩm Liên Quan</h2>
             </div>
             
             <div class="product">
@@ -88,7 +88,7 @@ $helper = $this->loadHelper("core");
                         <?php
                         foreach($product_mores as $pr_more):
                             ?>
-                            <div class="col-6 col-sm-3">
+                            <div class="col-6 col-sm-3 item-pro">
                                 <?php echo $this->element('product',array('product' => $pr_more));  ?>
                             </div>
                         <?php endforeach; ?> 

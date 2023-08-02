@@ -133,7 +133,7 @@
                                     <p><i class="fas fa-map-marker-alt"></i>Địa điểm nuôi trồng: 2/48 Đường 2 Tháng 9, P.Mỹ Phước, TX.Bến Cát, Bình Dương</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:<?php echo SDT; ?>"><?php echo SDT; ?></a></p>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:<?php echo SDT; ?>"><?php echo SDT.' - '.SDT2; ?></a></p>
                                 </li>
                                 <li>
                                     <p><i class="fas fa-envelope"></i>Email: <a href="mailto:locthienthao.contact@gmail.com">locthienthao.contact@gmail.com</a></p>

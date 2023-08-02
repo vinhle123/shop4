@@ -60,7 +60,7 @@
                 <?php
                    foreach($products as $product):
                 ?>
-                <div class="col-6 col-sm-3 special-grid top-featured">
+                <div class="col-6 col-sm-3 special-grid top-featured item-pro">
                     <?php echo $this->element('product',array('product' => $product));  ?>
                 </div>
                 <?php endforeach; ?>
@@ -79,7 +79,7 @@
                 <div class="row">
                     <?php foreach($categories as $category): ?>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="shop-cat-box">
+                        <div class="shop-cat-box shop-cat-box-cate">
                             <img class="img-fluid" src="<?php echo $this->Url->build('/webroot/photos/categories/'.$category['photo'], ['fullBase' => false]); ?>" alt="<?php echo $category['name_key']; ?>" />
                             <a href="<?php echo $this->Url->build('/the-loai/'.$category['name_key'], ['fullBase' => true]); ?>" class="btn hvr-hover" ><?php echo $category['name']; ?></a>
                         </div>

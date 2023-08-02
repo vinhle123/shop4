@@ -27,7 +27,7 @@ $helper = $this->loadHelper("core");
                     <?php
                     foreach($products as $product):
                         ?>
-                        <div class="col-6 col-sm-3">
+                        <div class="col-6 col-sm-3 item-pro">
                          <?php echo $this->element('product',array('product' => $product));  ?>
                      </div>
                  <?php endforeach; ?> 

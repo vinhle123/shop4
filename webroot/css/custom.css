@@ -253,7 +253,7 @@
 }
 
 .item-info-group a{
-    font: bold 15px/25px Poppins;
+    font: bold 15px/25px "Roboto", sans-serif;
     padding-bottom: 10px;
     width: 100%;
     display: inherit;
@@ -273,12 +273,12 @@
     padding: 0;
     background: rgb(249 149 25);
     display: inline-block;
+    border-radius: 10px;
 }
 
 .title-blog-info h2 a {
     display: inline-block;
     color: #fff;
-    background: rgb(249 149 25);
     padding: 12px 18px 12px 8px;
     border-left: 0px solid rgb(255, 146, 0);
     margin-bottom: -1px;
@@ -324,4 +324,16 @@
 
 .slides-control ul > li > img{
     top:0px !important;
+}
+
+.item-info-group{
+    padding-top: 10px;
+}
+
+.single-product-details .price-box-bar .cart-and-bay-btn a{
+    border-radius: 10px;
+}
+
+.cart-img{
+    border-radius: 10px;
 }
