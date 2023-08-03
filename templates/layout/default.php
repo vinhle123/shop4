@@ -203,7 +203,7 @@
             <a href="https://m.me/locthienthao" target="_blank" rel="nofollow"></a>
         </li>
         <li class="zalo">
-            <a href="https://zalo.me/<?php echo SDT; ?>" target="_blank" rel="nofollow"></a>
+            <a href="https://zalo.me/<?php echo SDT2; ?>" target="_blank" rel="nofollow"></a>
         </li>
     </ul>
 
@@ -212,7 +212,7 @@
             <a href="https://m.me/locthienthao" target="_blank" rel="nofollow"></a>
         </li>
         <li class="zalo">
-            <a href="https://zalo.me/<?php echo SDT; ?>" target="_blank" rel="nofollow"></a>
+            <a href="https://zalo.me/<?php echo SDT2; ?>" target="_blank" rel="nofollow"></a>
         </li>
         <li class="hotline">
             <a href="tel:<?php echo SDT; ?>" target="_blank" rel="nofollow"></a>

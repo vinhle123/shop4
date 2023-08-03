@@ -17,7 +17,7 @@ $helper = $this->loadHelper("core");
 <div class="shop-detail-box-main">
     <div class="container">
     <div>
-        <h2><a href="javascript:void(0)"><?php echo ucfirst($blog['title']); ?></a></h2>
+        <h2 style="font-weight: bold;"><a href="javascript:void(0)"><?php echo ucfirst($blog['title']); ?></a></h2>
     </div>    
     <div class="blog-content">
         <?php echo $blog['description']; ?>
@@ -35,7 +35,7 @@ $helper = $this->loadHelper("core");
                         <?php
                         foreach($product_mores as $pr_more):
                             ?>
-                            <div>
+                            <div class="item-pro">
                                 <?php echo $this->element('product',array('product' => $pr_more));  ?>
                             </div>
                         <?php endforeach; ?> 
